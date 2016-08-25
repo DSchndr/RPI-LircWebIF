@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Audio-Video-Receiver Steuerung">
+    <meta name="author" content="MrApplecraft">
+    <link rel="icon" href="favicon.ico">
+
+    <title>AVR-Control</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="theme.css" rel="stylesheet">
+  </head>
+
+  <body>
+      <div class="alert alert-info text-center" role="alert">
+        <strong>Audio-Video-Receiver Control</strong> Made by MrApplecraft :D
+      </div>
+<iframe name="votar" style="display:none;"></iframe>
+      <form action='/index.php' method='POST' target="votar">
+      <p>
+      	<button type="submit" name="power" class="btn btn-danger center-block">Power</button>
+      </p>
+      <div id="toolbar">
+      <div class="wrapper text-center">
+      <div class="btn-group">
+      	<button type="submit" name="hdmi1" class="btn btn-info">HDMI-1</button>
+      	<button type="submit" name="hdmi2" class="btn btn-info">HDMI-2</button>
+      	<button type="submit" name="hdmi3" class="btn btn-info">HDMI-3</button>      	
+      	<button type="submit" name="hdmi4" class="btn btn-info">HDMI-4</button>
+      </div>
+      </div>
+      </div>
+
+      <p></p>
+      
+      <div id="toolbar">
+      <div class="wrapper text-center">
+      <div class="btn-group">
+      	<button type="submit" name="av1" class="btn btn-info">AV1</button>
+      	<button type="submit" name="av2" class="btn btn-info">AV2</button>
+      	<button type="submit" name="av3" class="btn btn-info">AV3</button>
+      	<button type="submit" name="av4" class="btn btn-info">AV4</button>
+      	<button type="submit" name="av5" class="btn btn-info">AV5</button>
+      </div>
+      </div>
+      </div>
+      <p></p>
+      
+      <div id="toolbar">
+      <div class="wrapper text-center">
+      <div class="btn-group">
+      	<button type="submit" name="au1" class="btn btn-primary">Audio 1</button>
+      	<button type="submit" name="au2" class="btn btn-primary">Audio 2</button>
+      	<button type="submit" name="v-aux" class="btn btn-success">Front-AUX</button>
+      	<button type="submit" name="dock" class="btn btn-danger">Dock</button>
+      	<button type="submit" name="tuner" class="btn btn-info">Radio</button>
+      </div>
+      </div>
+      </div>
+      <p></p>
+      
+      <div id="toolbar">
+      <div class="wrapper text-center">
+      <div class="btn-group">
+      	<button type="submit" name="volp" class="btn btn-default">Volume +</button>
+      	<button type="submit" name="volmu" class="btn btn-warning">Mute</button>
+      	<button type="submit" name="volm" class="btn btn-default">Volume -</button>
+      </div>
+      </div>
+      </div>
+      <br></br>
+
+      <div id="toolbar">
+      <div class="wrapper text-center">
+      <div class="btn-group">
+      	<button type="submit" name="up" class="btn btn-primary center-block">_Up_</button>
+      </div>
+      </div>
+      </div>
+      <p> </p>
+
+      <div id="toolbar">
+      <div class="wrapper text-center">
+      <div class="btn-group">
+      	<button type="submit" name="left" class="btn btn-primary"><---</button>
+      	<button type="submit" name="enter" class="btn btn-default">Enter</button>
+      	<button type="submit" name="right" class="btn btn-primary">---></button>
+      </div>
+      </div>
+      </div>      
+<p></p>
+      <p>
+      	<button type="submit" name="down" class="btn btn-primary center-block">Down</button>
+      </p>      
+<br></br>
+      <div id="toolbar">
+      <div class="wrapper text-center">
+      <div class="btn-group">
+      	<button type="submit" name="return" class="btn btn-primary">Return</button>
+      	<button type="submit" name="setup" class="btn btn-default">Setup</button>
+	<button type="submit" name="other" class="btn btn-success" onclick="location.href='other.php';">Other</button>
+      </div>
+      </div>
+      </div>        
+      </form>  
+  </body>
