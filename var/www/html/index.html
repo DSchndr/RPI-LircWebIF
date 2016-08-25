@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="MrApplecraft">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Remotecontrol-Login</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+    
+<script>
+// Can be bypassed so easy XD
+// Copyed from some site i forgot. Sorry.
+var attempt = 3; // Variable to count number of attempts.
+// Below function Executes on click of login button.
+function validate(){
+if ( attempt == 3){
+  document.getElementById("password").disabled = false;
+  document.getElementById("submit").disabled = false;
+}
+var password = document.getElementById("password").value;
+if ( password == "Hallo"){
+alert ("Hallöchen :)");
+window.location = "avr-main.html"; // Redirecting to remote control page.
+return false;
+}
+else{
+attempt --;// Decrementing by one.
+if( attempt == 0){
+document.getElementById("password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+if( attempt == 1){
+alert("Du hast noch "+attempt+" versuch;");
+}
+else{
+  alert("Du hast noch "+attempt+" versuche");
+}
+// Disabling fields after 3 attempts.
+}
+}
+</script>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin" method="post" name="myform">
+        <h2 class="form-signin-heading">AVR-Steuerung Login</h2>
+        <label for="inputPassword" class="sr-only">Passwort</label>
+        <input type="text" id="password" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <!-- <input type="checkbox" value="remember-me"> Vergiss mich nicht :( -->
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="button" id="submit" onclick="validate()">Einloggen</button>
+      </form>
+
+    </div> <!-- /container -->
+  </body>
+</html>
